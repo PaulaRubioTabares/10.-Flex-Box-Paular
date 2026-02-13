@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
+
+    <title>Flex-Box Paula Rubio</title>
+</head>
+
+
+<body>
+    <header class="header">
+        <h1 class="h1__header">Flex-Box</h1>
+    </header>
+
+
+    <!-- Contenido principal -->
+    <main class="main__container">
+        <h2 class="title">Modelo de diseño en HTML "cajas flexibles"</h2>
+        <p>Lo primero a tener en cuenta es que los elementos a los que se les quiere modificar
+            distribución con este método deben estar dentro de un contenedor, al cual se le aplica la propiedad de
+            <strong>display flex o inline-flex</strong>
+        </p>
+        <hr>
+
+        <!-- Flexbox contenedor padre -->
+        <article class="article__container">
+            <h2 class="title">Propiedades para el contenedor padre</h2>
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Display flex:</h2>
+
+                <p>Contenedor <strong>sin</strong> display flex, cada elemento bloque queda uno debajo del otro</p>
+                <div class="container__div">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <p>Contenedor <strong>con</strong> display flex, todos los elementos, así sean de bloque quedan en una sola linea</p>
+                <div class="container__flex">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+            </section>
+            <!-- fin nueva sección -->
+
+            <hr>
+            <p>Cuando a un contenedor se le aplica la propiedad de display flex hay otras propiedades que se pueden modificar:</p>
+
+            <ul>
+                <li>Flex direction</li>
+                <li>Flex wrap</li>
+                <li>Justify content</li>
+                <li>Align item</li>
+            </ul>
+
+            <hr>
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Flex direction</h2>
+                <h3 class="h3__name">Flex direction: row</h3>
+                <p><strong>Valor por defecto.</strong></p>
+                <div class="container__flex direction__row">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">Flex direction: row-reverse</h3>
+                <div class="container__flex direction__row_reverse">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">Flex direction: column</h3>
+                <div class="container__flex direction__column">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">Flex direction: column-reverse</h3>
+                <div class="container__flex direction__column_reverse">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Flex wrap</h2>
+                <h3 class="h3__name">flex-wrap: nowrap</h3>
+                <p>Coloca todos los elementos en una sola linea, sin importarle en tamaño.</p>
+                <div class="container__flex wrap__no_wrap">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">flex-wrap: wrap</h3>
+                <p>Coloca los elementos que no caben en la siguiente fila, respeta el tamaño de estos</p>
+                <div class="container__flex wrap__wrap">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">flex-wrap: wrap-reverse</h3>
+                <div class="container__flex wrap__wrap_reverse">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Justify content</h2>
+                <h3 class="h3__name">Justify content: flex-start</h3>
+                <p><strong>Valor por defecto</strong></p>
+                <div class="container__flex justify__flex_start">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+                <h3 class="h3__name">Justify content: end</h3>
+                <div class="container__flex justify__flex_end">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+                <h3 class="h3__name">Justify content: center</h3>
+                <p>Centra los elementos de forma horizontal</p>
+                <div class="container__flex justify__center">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+                <h3 class="h3__name">Justify content: space-between</h3>
+                <div class="container__flex justify__space_between">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+                </div>
+
+                <h3 class="h3__name">Justify content: space-around</h3>
+                <p>Al añadir los espacios, ignora las medidas de border y padding</p>
+                <div class="container__flex justify__space_around">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+                </div>
+
+                <h3 class="h3__name">Justify content: space-evenly</h3>
+                <p>Distribuye el espacio equitativamente incluyendo el border y padding</p>
+                <div class="container__flex justify__space_evenly">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Align items</h2>
+                <p>Sirve para posicionar de manera vertical los elemento que están en <strong>una sola linea si los elementos del contenedor llenan más de una linea, el efecto no sirve</strong></p>
+                <h3 class="h3__name">Align items: start</h3>
+                <div class="container__flex align__start">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+                <h3 class="h3__name">Align items: end</h3>
+                <div class="container__flex align__end">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+                <h3 class="h3__name">Align items: center</h3>
+                <p>Centra los elementos de manera vertical</p>
+                <div class="container__flex align__center">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+                <h3 class="h3__name">Align items: stretch</h3>
+                <p><strong>Valor por defecto</strong>. <br> Rellena todo el contenedor de manera vertical, solo funciona si <strong>los elementos no tienen un height</strong> definido</p>
+                <div class="container__flex align__stretch">
+                    <div class="elemento height__auto">1</div>
+                    <div class="elemento height__auto">2</div>
+                    <div class="elemento height__auto">3</div>
+                </div>
+
+                <h3 class="h3__name">Align items: baseline</h3>
+                <p>Los elementos se alinean según la linea base del texto</p>
+                <div class="container__flex align__baseline">
+                    <div class="elemento">1</div>
+                    <div class="elemento baseline__fontSize">2</div>
+                    <div class="elemento">3</div>
+                </div>
+
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Align content</h2>
+                <p>Cuando los elementos ocupan más de una fila, al utilizar <strong>flex-wrap: wrap</strong> se utiliza <strong>align content</strong> en lugar de align items
+                </p>
+                <p>Si se quiere controlar alineación vertical se necesita espacio libre (height o min-height suficiente) en el contenedor, si no <strong>No funciona</strong></p>
+
+                <hr>
+                <p><strong>Diferencias entre align items y align content</strong></p>
+                <h3 class="h3__name">Align <strong>items:</strong> center</h3>
+                <div class="container__flex wrap__wrap align__center">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+                <p>La propiedad align items no se aplica ya que los elementos están en dos filas diferentes, por ello se usa align content.</p>
+
+                <h3 class="h3__name">Align <strong>content:</strong> center</h3>
+                <p>Centra los elementos de manera vertical</p>
+                <div class="container__flex wrap__wrap content__center">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+                <hr>
+
+                <h3 class="h3__name">Align content: start</h3>
+                <div class="container__flex wrap__wrap content__start">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">Align content: end</h3>
+                <div class="container__flex wrap__wrap content__end">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">Align content: space-between</h3>
+                <div class="container__flex wrap__wrap content__space_between">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">Align content: space-around</h3>
+                <div class="container__flex wrap__wrap content__space_around">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+
+                <h3 class="h3__name">Align content: space-evenly</h3>
+                <div class="container__flex wrap__wrap content__space_evenly">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+        </article>
+
+
+
+        <br>
+        <br>
+        <article class="article__container">
+            <h2 class="title">Propiedades para el contenedor hijo</h2>
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Flex grow</h2>
+                <h3 class="h3__name">flex-grow: 1</h3>
+                <p>Flex grow hace que los elementos hijos ocupen el 100% del contenedor padre, en este caso 1 significa el 100%</p>
+                <br>
+                <p><strong>Sin flex-grow:1;</strong></p>
+                <div class="container__flex wrap__wrap ">
+                    <div class="elemento">1</div>
+                    <div class="elemento">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                    <div class="elemento">5</div>
+                    <div class="elemento">6</div>
+                </div>
+                <p><strong>Con flex-grow: 1;</strong></p>
+                <div class="container__flex wrap__wrap">
+                    <div class="elemento flex__grow">1</div>
+                    <div class="elemento flex__grow">2</div>
+                    <div class="elemento flex__grow">3</div>
+                    <div class="elemento flex__grow">4</div>
+                    <div class="elemento flex__grow">5</div>
+                    <div class="elemento flex__grow">6</div>
+                </div>
+
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Flex shrink</h2>
+                <p>Flex grow hace que los elementos hijos crezcan o disminuyan según el contenedor, ignorando el largo definido para ellos, pero con flex shrink va a respetar ese tamaño </p>
+                <br>
+                <p>Para este ejemplo los elementos hijos tienen un width de 100px</p>
+                <p><strong>Sin flex shrink</strong></p>
+                <div class="container__flex wrap__wrap">
+                    <div class="elemento flex__grow width__shrink">1</div>
+                    <div class="elemento flex__grow width__shrink">2</div>
+                    <div class="elemento flex__grow width__shrink">3</div>
+                    <div class="elemento flex__grow width__shrink">4</div>
+                    <div class="elemento flex__grow width__shrink">5</div>
+                    <div class="elemento flex__grow width__shrink">6</div>
+                </div>
+                <p><strong>Con flex shrink: 0;</strong></p>
+                <div class="container__flex wrap__wrap">
+                    <div class="elemento flex__grow flex__shrink width__shrink">1</div>
+                    <div class="elemento flex__grow flex__shrink width__shrink">2</div>
+                    <div class="elemento flex__grow flex__shrink width__shrink">3</div>
+                    <div class="elemento flex__grow flex__shrink width__shrink">4</div>
+                    <div class="elemento flex__grow flex__shrink width__shrink">5</div>
+                    <div class="elemento flex__grow flex__shrink width__shrink">6</div>
+                </div>
+
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Order</h2>
+                <p> Especifica el orden de los elementos hijos dentro del contenedor sin modificar la estructura html</p>
+                <div class="container__flex wrap__wrap">
+                    <div class="elemento flex__grow order">1</div>
+                    <div class="elemento flex__grow order">2</div>
+                    <div class="elemento flex__grow order">3</div>
+                    <div class="elemento flex__grow order">4</div>
+                    <div class="elemento flex__grow primer__order">5</div>
+                    <div class="elemento flex__grow order">6</div>
+                </div>
+                <p>Al elemento que se mueve se le coloca order 1, y para que funcione, se coloca order 2 a los demás elementos</p>
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+            <!-- nueva sección -->
+            <section class="sections__containers">
+                <h2 class="h2">Align self</h2>
+                <p>sirve para alinear los elementos hijos individualmente</p>
+
+                <h3 class="h3__name">Align self: flex-start</h3>
+                <div class="container__flex">
+                    <div class="elemento">1</div>
+                    <div class="elemento self__start">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                </div>
+
+                <h3 class="h3__name">Align self: flex-end</h3>
+                <div class="container__flex">
+                    <div class="elemento">1</div>
+                    <div class="elemento self__end">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                </div>
+
+                <h3 class="h3__name">Align self: center</h3>
+                <div class="container__flex">
+                    <div class="elemento">1</div>
+                    <div class="elemento self__center">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                </div>
+
+                <h3 class="h3__name">Align self: flex-stretch</h3>
+                <p>No debe tener definido un height o height auto</p>
+                <div class="container__flex">
+                    <div class="elemento">1</div>
+                    <div class="elemento self__stretch height__auto">2</div>
+                    <div class="elemento">3</div>
+                    <div class="elemento">4</div>
+                </div>
+
+                <h3 class="h3__name">Align self: baseline</h3>
+                <p>El elemento 2 y el elemento 3 tienen la propiedad de Align self: baseline</p>
+                <div class="container__flex">
+                    <div class="elemento">1</div>
+                    <div class="elemento self__baseline">2</div>
+                    <div class="elemento font__baseline self__baseline">3</div>
+                    <div class="elemento">4</div>
+                </div>
+
+
+
+            </section>
+            <!-- fin nueva sección -->
+            <hr>
+
+
+
+        </article>
+
+
+
+    </main>
+    <!-- Fin contenido principal -->
+
+
+    <footer class="footer">
+        2026
+    </footer>
+</body>
+
+</html>
